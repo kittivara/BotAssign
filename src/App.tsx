@@ -22,8 +22,8 @@ const App = () => {
       <input ref={ref} type="text" id="command" name="command" placeholder='enter input' />
       <button onClick={() => printBot()}>Submit</button>
       {result && <div>
-        <p>X: {result.axisX}</p>
-        <p>Y: {result.axisY}</p>
+        <p>X: {result.axisX || "-"}</p>
+        <p>Y: {result.axisY || "-"}</p>
         <p>Compass: {result.lastFacing}</p>
       </div>}
     </div>

@@ -22,7 +22,7 @@ export class Bot {
 
     }
 
-    createCommands(command: string): string[] {
+    private createCommands(command: string): string[] {
         let wFlag = false;
         let wWord: string = "";
         let arr: string[] = [];
@@ -46,7 +46,7 @@ export class Bot {
         }
         return arr;
     }
-    calculatePosition(arrCommand: string[]): { axisX: number, axisY: number, crrFacing: number } {
+    private calculatePosition(arrCommand: string[]): { axisX: number, axisY: number, crrFacing: number } {
         let crrFacing = 1; //1 = N, 2 = E, 3 = S, 4 = W
         let axisX = 0;
         let axisY = 0;
@@ -91,7 +91,7 @@ export class Bot {
             crrFacing
         }
     }
-    printDirection(lastFacing: number): string | undefined {
+    private printDirection(lastFacing: number): string | undefined {
         switch (lastFacing) {
             case 1:
                 return "North";
